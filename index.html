@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Supreme Court Orders</title>
+  <style>
+    body {
+      font-family: 'Calibri';
+    }
+    /* Style for the toggle buttons */
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    /* Style for the active (toggled) buttons */
+    button.active {
+      background-color: #28a745;
+    }
+    textarea {
+      width: 80%;
+      max-width: 100%;
+      /* Ensure it doesn't exceed the viewport width */
+      box-sizing: border-box;
+      /* Include padding and border in the width calculation */
+    }
+    #input1 {
+      width: 20%;
+      box-sizing: border-box;
+      /* Include padding and border in the width calculation */
+    }
+    /* Add CSS for green and red backgrounds based on the match */
+    .match {
+      background-color: #28a745;
+      /* Green */
+    }
+    .no-match {
+      background-color: #dc3545;
+      /* Red */
+    }
+    /* New style for the output */
+    /* New style for the output */
+    .jkl-details {
+      display: none;
+      /*this stop the detail content from displaying atutomatically.remove it if needed*/
+      font-size: small;
+      font-style: italic;
+
+      /* Add other styles as needed */
+    }
+    .details-content {
+      font-size: small;
+      font-style: italic;
+      /* Add other styles as needed */
+    }
+    #abbr {
+      display: none;
+    }
+
+    .highlight {
+            color: red;
+        }
+  </style>
+</head>
+<body>
+  <h1>Supreme Court Orders</h1>
+  
+  <button id="showAllJKLButton" onclick="toggleAllJKL()">Show All Orders</button>
+  <!-- Add the Show LMN button -->
+ 
+  <div id="jklContainer"></div>
+  <!--content of lmn is visible here-->
+
+  <script>
+    var valuesArray = [
+
+{input1: "100", input2: " 2080.04.24; officer: Anjan Sir & Shiva Sir; show cause order, no interim order (ratio: appropriate to be settled through final hearing)", input3: "", input4: "<br>सर्वोच्च अदालत, संवैधानिक इजलास <br> सम्माननीय का.मु.प्रधान न्यायाधीश श्री विश्वम्भरप्रसाद श्रेष्ठ <br> माननीय न्यायाधीश श्री ईश्वरप्रसाद खतिवडा<br> माननीय न्यायाधीश डा. श्री आनन्दमोहन भट्टराई <br> माननीय न्यायाधीश श्री अनिल कुमार सिन्हा <br> माननीय न्यायाधीश श्री प्रकाशमान सिंह राउत<br> आदेश<br> ०७९-WC-००९३ <br><br>विषयः उत्प्रेषणसमेत <br><br>", input5: " <b><u>निवेदक:</u></b><br>वरिष्ठ अधिवक्ता डा.सुरेन्द्र भण्डारी <br><br><b><u>प्रत्यर्थी:</u></b><br>कानून न्याय तथा संसदीय मामिला मन्त्रालय, सिंहदरबार काठमाडौंसमेत <br><br>", input6: "<p>प्रस्तुत निवेदनमा निवेदकको तर्फबाट विद्वान् वरिष्ठ अधिवक्ताद्वय श्री सुरेन्द्र भण्डारी र श्री बद्रिबहादुर कार्की एवं विद्वान अधिवक्ताद्वय श्री विक्रम भण्डारी र श्री त्रिलोकबहादुर चन्द तथा सरोकारवालाको तर्फबाट विदुषी अधिवक्ता श्री मोहना अन्सारी र विद्वान् अधिवक्ता श्री सुनिल कुमार पटेलले गर्नुभएको बहस सुनियो।</p>", input11: "यसमा के कसो भएको हो? निवेदकको मागबमोजिमको आदेश किन जारी हुन नपर्ने हो? आदेश जारी हुनु नपर्ने कानूनबमोजिमको आधार र कारण भए सो समेत खुलाई सर्वोच्च अदालत (संवैधानिक इजलास सञ्‍चालन) नियमावली, २०७२ को नियम १९(१) बमोजिम यो आदेश प्राप्त भएको मितिले बाटाको म्याद बाहेक ७ (सात) दिन भित्र महान्यायाधिवक्ताको कार्यालयमार्फत <p>लिखित जवाफ पेश गर्नु भनी यो आदेश र रिट निवेदनको प्रतिलिपि साथै राखी प्रत्यर्थीहरुका नाममा सूचना म्याद जारी गरी लिखित जवाफ प्राप्त भएपछि वा अवधि नाघेपछि नियमानुसार पेश गर्नू।</p>", input12: "<p>निवेदकले अन्तरिम आदेश माग गरेको सम्बन्धमा विचार गर्दा, नेपाल नागरिकता ऐन, २०६३ र यसको प्रथम संशोधन, २०७९ समेतका कतिपय प्राबधानहरू संविधानसँग बाझिएका, सुसङ्गत नभएका र आफैंमा अन्तरविरोधसमेत भएको हुँदा त्यस्ता प्रावधानहरू अमान्य घोषित गरी पाउँ भनी निवेदकले जिकिर लिएको पाइयो। नेपाल नागरिकता (पहिलो संशोधन) ऐन, २०७९ लागु भइ सो बमोजिम नागरिकता लिने दिने पक्रिया प्रारम्भ भइसकेको सन्दर्भमा नेपाली नागरिकलाई नागरिकताको प्रमाणपत्र प्रदान गर्ने कार्य रोक्ने गरी अहिले आदेश गर्नु मनासिव देखिएन। निवेदकले उठाएका संविधान तथा कानून व्याख्या सम्बन्धी प्रश्नको व्याख्या अन्तिम सुनुवाईको अवस्थामा निरूपण गर्नु मनासिव हुने प्रकृतिको देखिंदा अहिले अन्तरिम आदेश जारी गर्न परेन। नियमानुसार गर्नू।</p>", input13: "<br>न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; का.मु.प्रधान न्यायाधीश <br>इति संवत् २०८० साल साउन २४ गते रोज ४ शुभम्........ <br><br>", input7: "", input8: "", input9: "", input10: "scoi1, sc1, cb1, advocate surendra bhandari, 2080.04.24, ioni1, citizenship, writ, jrl1, 079-WC-0093, certiorari, shiva, "},
+
+
+{input1: "101", input2: "2080.04.24; officer: Anjan Sir & Shiva Sir; no show cause, writ transfered to general bench", input3: "", input4: "<br>सर्वोच्च अदालत, संवैधानिक इजलास <br> सम्माननीय का.मु.प्रधान न्यायाधीश श्री विश्वम्भरप्रसाद श्रेष्ठ <br> माननीय न्यायाधीश श्री ईश्वरप्रसाद खतिवडा<br> माननीय न्यायाधीश डा. श्री आनन्दमोहन भट्टराई <br> माननीय न्यायाधीश श्री अनिल कुमार सिन्हा <br> माननीय न्यायाधीश श्री प्रकाशमान सिंह राउत<br> आदेश<br> ०७९-WC-००९५ <br><br>विषयः उत्प्रेषणसमेत<br><br>", input5: " <b><u>निवेदक:</u></b><br>नेपाल ट्रक यातायात व्यवसायी महासंघ <br><br><b><u>प्रत्यर्थी:</u></b><br>प्रधानमन्त्री तथा मन्त्रीपरिषदको कार्यालय सिंहदरबार काठमाडौसमेत <br><br>", input6: "<p>प्रस्तुत निवेदनमा निवेदकको तर्फबाट विद्वान् वरिष्ठ अधिवक्ताद्वय श्री विजयप्रसाद मिश्रले गर्नुभएको बहस सुनियो।</p>", input11: "<p>यसमा निवेदकको तर्फबाट विद्वान् वरिष्ठ अधिवक्ता श्री विजय प्रसाद मिश्रले गर्नुभएको बहस सुनियो। प्रस्तुत निवेदनमा उठाइएको विषयवस्तु हेर्दा नेपालको संविधानको धारा १३७ तथा सर्वोच्च अदालत (संवैधानिक इजलास संचालन) नियमावली, २०७२ को नियम ३ अनुसार यस इजलासको अधिकारक्षेत्रभित्र पर्ने नदेखिएकोले सर्वोच्च अदालत (संवैधानिक इजलास सञ्चालन) नियमावली, २०७२ को नियम ५(४) बमोजिम यस इजलासको दायरीको लगत कट्टा गरी यस अदालतको अन्य (सम्बन्धित) इजलासबाट हेर्ने गरी दर्ता गरी नियमानुसार गर्नू।</p>", input12: "", input13: "<br>न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; का.मु.प्रधान न्यायाधीश <br>इति संवत् २०८० साल साउन २४ गते रोज ४ शुभम्........ <br><br>", input7: "", input8: "", input9: "", input10: "sconi1, advocate bijay prasad mishra, sc1, cb1, 2080.04.24, writ, 079-WC-0095, certiorari, truck enterprenuers, लगत कट्टा गर्नू, shiva"},
+
+{input1: "102", input2: "2080.04.24; officer: Anjan Sir & Shiva Sir; show cause order, interim order issued (ratio: irrepairable loss),", input3: "", input4: "<p>सर्वोच्च अदालत, संवैधानिक इजलास <br> सम्माननीय का.मु.प्रधान न्यायाधीश श्री विश्वम्भरप्रसाद श्रेष्ठ <br> माननीय न्यायाधीश श्री ईश्वरप्रसाद खतिवडा<br> माननीय न्यायाधीश डा. श्री आनन्दमोहन भट्टराई <br> माननीय न्यायाधीश श्री अनिल कुमार सिन्हा <br> माननीय न्यायाधीश श्री प्रकाशमान सिंह राउत<br> आदेश<br> ०७९-WC-००९३ <br><br>विषयः उत्प्रेषणसमेत </p>", input5: "<p><b><u>निवेदक:</u></b><br>चन्द्रागिरी नगरपालिकाको नगर सभा चन्द्रागिरी काठमाडौंसमेत <br><br><b><u>प्रत्यर्थी:</u></b><br>चन्द्रागिरी नगरपालिकाको नगर सभा चन्द्रागिरी काठमाडौंसमेत </p>", input6: "<p>प्रस्तुत निवेदनमा निवेदकको तर्फबाट विद्वान् वरिष्‍ठ अधिवक्ता श्री चन्द्रकान्त ज्ञवाली एवं विद्वान अधिवक्ताहरू श्री ज्योति बानियाँ, श्री पदम बहादुर श्रेष्ठ र श्री दिलराज खनालले गर्नुभएको बहस सुनियो।</p>", input11: "<p> यसमा के कसो भएको हो? निवेदकको मागबमोजिमको आदेश किन जारी हुन नपर्ने हो? आदेश जारी हुनु नपर्ने कानूनबमोजिमको आधार र कारण भए सो समेत खुलाई सर्वोच्च अदालत (संवैधानिक इजलास सञ्‍चालन) नियमावली, २०७२ को नियम १९(१) बमोजिम यो आदेश प्राप्त भएको मितिले बाटाको म्याद बाहेक ७ (सात) दिन भित्र प्रत्यर्थी नं. १, २ र ३ को हकमा आफै वा आफ्नो कानूनबमोजिमको प्रतिनिधिमार्फत तथा प्रत्यर्थी नं. ४, ५, ६, र ७ को हकमा महान्यायाधिवक्ताको कार्यालयमार्फत लिखित जवाफ पेश गर्नु भनी यो आदेश र रिट निवेदनको प्रतिलिपि साथै राखी प्रत्यर्थीहरुका नाममा सूचना म्याद जारी गरी लिखित जवाफ प्राप्त भएपछि वा अवधि नाघेपछि नियमानुसार पेश गर्नू।</p>", input12: "<p>निवेदकले अन्तरिम आदेश माग गरेको सम्बन्धमा विचार गर्दा, चन्द्रागिरी एकीकृत खानेपानी तथा सरसफाई ब्यवस्थापन ऐन, २०८० को दफा ५ को उपदफा (१), (2), (3), (४), (७) र दफा ६ का प्रावधान नेपालको संविधान, तथा जलस्रोत ऐन, २०४९ लगायतका कानूनसँग बाझिएको हुँदा अमान्य घोषित गरी पाउँ भन्ने जिकिर लिएको पाइयो। चन्द्रागिरी एकीकृत खानेपानी तथा सरसफाई व्यस्थापन ऐन, २०८० को दफा ५ को उपदफा (१), (2), (3), (४), (७) र दफा ६ का प्रावधान कार्यान्वयन भएमा चन्द्रगिरी नगरक्षेत्रका खानेपानी प्रणालीमा संलग्न रहेका खानेपानी तथा सरसफाई उपभोक्ता समिति, समूह र संस्थाहरू निस्क्रिय हुन गई निवेदक उपभोक्ता समितिलाई अपूरणीय क्षति पुग्न सक्ने देखिंदा सुविधा सन्तुलनको दृष्टिकोणबाट चन्द्रागिरी एकीकृत खानेपानी तथा सरसफाई ब्यवस्थापन ऐन, २०८० को दफा ५ को उपदफा (१), (2), (3), (४), (७) र दफा ६ का प्रावधान प्रस्तुत निवेदनको अन्तिम टुङ्गो नलागेसम्म कार्यान्वयन नगर्नू नगराउनू भनी प्रत्यर्थीहरुका नाममा सर्वोच्च अदालत (संवैधानिक इजलास सञ्चालन) नियमावली, २०७२ को नियम १९(४) बमोजिम अन्तरिम आदेश जारी गरिएको छ। प्रस्तुत आदेशको जनाउ प्रत्यर्थीहरूलाई दिई नियमानुसार गर्नू।</p>", input13: "<p><br>न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; का.मु.प्रधान न्यायाधीश <br>इति संवत् २०८० साल साउन २४ गते रोज ४ शुभम्........ </p><br><br>", input7: "", input8: "", input9: "", input10: "scoi1, sc1, cb1, 2080.04.24, ioi1, writ, jrl1, 079-WC-0096, certiorari, chandragiri, khanepani, advocate jyoti baniya, shiva"},
+
+
+
+{input1: "103", input2: "2080.04.24; officer: Anjan Sir & Shiva Sir; show cause order, interim order issued (ratio: irrepairable loss),", input3: "", input4: "<p>सर्वोच्च अदालत, संवैधानिक इजलास <br> सम्माननीय का.मु.प्रधान न्यायाधीश श्री विश्वम्भरप्रसाद श्रेष्ठ <br> माननीय न्यायाधीश श्री ईश्वरप्रसाद खतिवडा<br> माननीय न्यायाधीश डा. श्री आनन्दमोहन भट्टराई <br> माननीय न्यायाधीश श्री अनिल कुमार सिन्हा <br> माननीय न्यायाधीश श्री प्रकाशमान सिंह राउत<br> आदेश<br> ०८०-WC-०००४ <br><br>विषयः उत्प्रेषणसमेत </p>", input5: "<p><b><u>निवेदक:</u></b><br>काशीराज पराजुलीसमेत <br><br><b><u>प्रत्यर्थी:</u></b><br>प्रदेश सभा कोशी प्रदेश विराटनगरसमेत </p>", input6: "<p>प्रस्तुत निवेदनमा निवेदकको तर्फबाट विद्वान् अधिवक्ता श्री नारायणप्रसाद पराजुलीले गर्नु भएको बहस सुनियो।</p>", input11: "<p> यसमा के कसो भएको हो? निवेदकको मागबमोजिमको आदेश किन जारी हुन नपर्ने हो? आदेश जारी हुनु नपर्ने कानूनबमोजिमको आधार र कारण भए सो समेत खुलाई सर्वोच्च अदालत (संवैधानिक इजलास सञ्‍चालन) नियमावली, २०७२ को नियम १९ (१) बमोजिम यो आदेश प्राप्त भएको मितिले बाटाको म्याद बाहेक ७ (सात) दिन भित्र मुख्यन्यायाधिवक्ताको कार्यालय, कोशी प्रदेश विराटनगरमार्फत लिखित जवाफ पेश गर्नु भनी यो आदेश र रिट निवेदनको प्रतिलिपि साथै राखी प्रत्यर्थीहरुका नाममा सूचना म्याद जारी गरी लिखित जवाफ प्राप्त भएपछि वा अवधि नाघेपछि नियमानुसार पेश गर्नू। </p>", input12: "<p>निवेदकले अन्तरिम आदेश माग गरेको सम्बन्धमा विचार गर्दा, निवेदकले कोशी प्रदेशको निजामती सेवा ऐन, २०७९ को दफा २९(३) को <b> “अन्यत्र जुनसुकै कुरा लेखिएको भए तापनि यस ऐन बमोजिम बढुवाका लागि योग्यता पुगेका कर्मचारीको बढुवा गर्ने प्रयोजनको लागि प्रदेशमा समायोजन भई पहिले समायोजन भएको कर्मचारीलाई पहिले र पछि समायोजन भएको कर्मचारीलाई क्रमशः पछि बढुवा गरिनेछ” </b> भन्ने व्यवस्था कर्मचारी समायोजन ऐन, २०७५ को दफा १४ (३) को <b> “... समायोजन भएको कर्मचारीको हकमा निजको समायोजन हुनु पूर्वको सेवा अवधि समेत गणना गरिनेछ” </b> भन्ने व्यवस्थासँग बाझिएकोले अमान्य गरी पाउँ भनी निवेदकले जिकिर लिएको पाइयो। प्रदेश लोक सेवा आयोग कोशी प्रदेश, विराटनगरले प्रदेश निजामती सेवाका विभिन्न सेवा समूहका प्राविधिक तथा अप्राविधिक तर्फका अधिकृत स्तर सातौं तहका पदहरुको ज्येष्ठता र कार्य सम्पादन मूल्याङ्कनद्वारा हुने बढुवाको सुचना सुचना नं. १८१/२०७९-०८० र सुचना नं. १८२/२०७९-०८० मिति २०८०/३/११ मा प्रकाशित गरेको देखियो। कोशी प्रदेशको निजामती सेवा ऐन, २०७९ को दफा २९(३) कार्यान्वयन भएमा कर्मचारी समायोजन ऐन, २०७५ को दफा १४(३) प्रतिकूल जेष्ठ कर्मचारी बढुवाबाट वञ्चित भई कनिष्ठ कर्मचारी बढुवा हुने अवस्था रही निवेदकहरूलाई अपूरणीय क्षति पुग्न सक्ने देखिएकोले कोशी प्रदेशको निजामती सेवा ऐन, २०७९ को दफा २९(३) को व्यवस्था प्रस्तुत निवेदनको अन्तिम टुङ्गो नलागेसम्म कार्यान्वयन नगर्नू नगराउनू भनी प्रत्यर्थीहरुका नाममा सर्वोच्च अदालत (संवैधानिक इजलास सञ्चालन) नियमावली, २०७२ को नियम १९(४) बमोजिम अन्तरिम आदेश जारी गरिएको छ। प्रस्तुत आदेशको जनाउ प्रत्यर्थीहरूलाई दिई नियमानुसार गर्नू।</p>", input13: "<p><br>न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; न्यायाधीश &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; का.मु.प्रधान न्यायाधीश <br>इति संवत् २०८० साल साउन २४ गते रोज ४ शुभम्........ </p><br><br>", input7: "", input8: "", input9: "", input10: "scoi1, sc1, cb1, 2080.04.24, ioi1, writ, jrl1, 079-WC-0096, certiorari, chandragiri, khanepani, advocate jyoti baniya, shiva"},
+
+
+    ];
+
+    var mainTextVisible = false;
+    var lmnContentVisible = false;
+    var lmnDetailsVisible = false;
+    //autopopulating the input fields
+    function autoPopulateInputs() {
+      var input1Value = document.getElementById("input1").value;
+      var matchingValue = valuesArray.find(function (item) {
+        return item.input1 === input1Value;
+      });
+      var input1Field = document.getElementById("input1");
+      if (matchingValue) {
+        input1Field.value = matchingValue.input1;
+        input1Field.classList.remove("no-match");
+        input1Field.classList.add("match");
+        // Rest of your code to populate other fields...
+      } else {
+        input1Field.value = input1Value;
+        input1Field.classList.remove("match");
+        input1Field.classList.add("no-match");
+      }
+      if (matchingValue) {
+        document.getElementById("input2").value = matchingValue.input2.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input3").value = matchingValue.input3.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input4").value = matchingValue.input4.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input5").value = matchingValue.input5.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input6").value = matchingValue.input6.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input11").value = matchingValue.input11.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input12").value = matchingValue.input12.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input13").value = matchingValue.input13.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input7").value = matchingValue.input7.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input8").value = matchingValue.input8.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input9").value = matchingValue.input9.replace(/</g, "<").replace(/>/g, ">");
+        document.getElementById("input10").value = matchingValue.input10
+      } else {
+        document.getElementById("input2").value = "";
+        document.getElementById("input3").value = "";
+        document.getElementById("input4").value = "";
+        document.getElementById("input5").value = "";
+        document.getElementById("input6").value = "";
+        document.getElementById("input11").value = "";
+        document.getElementById("input12").value = "";
+        document.getElementById("input13").value = "";
+        document.getElementById("input7").value = "";
+        document.getElementById("input8").value = "";
+        document.getElementById("input9").value = "";
+        document.getElementById("input10").value = "";
+      }
+    }
+    var showAllJKLButton = document.getElementById("showAllJKLButton");
+    var jklContainer = document.getElementById("jklContainer");
+    // Toggle the visibility of all JKL content
+    function toggleAllJKL() {
+      if (jklContainer.innerHTML === '') {
+        // Generate JKL content if it's empty
+        for (var i = 0; i < valuesArray.length; i++) {
+          var input1Value = valuesArray[i].input1;
+          var input2Value = valuesArray[i].input2.replace(/</g, "<").replace(/>/g, ">");
+          var input3Value = valuesArray[i].input3.replace(/</g, "<").replace(/>/g, ">");
+          var input4Value = valuesArray[i].input4.replace(/</g, "<").replace(/>/g, ">");
+          var input5Value = valuesArray[i].input5.replace(/</g, "<").replace(/>/g, ">");
+          var input6Value = valuesArray[i].input6.replace(/</g, "<").replace(/>/g, ">");
+          var input11Value = valuesArray[i].input11.replace(/</g, "<").replace(/>/g, ">");
+          var input12Value = valuesArray[i].input12.replace(/</g, "<").replace(/>/g, ">");
+          var input13Value = valuesArray[i].input13.replace(/</g, "<").replace(/>/g, ">");
+          var input7Value = valuesArray[i].input7.replace(/</g, "<").replace(/>/g, ">");
+          var input8Value = valuesArray[i].input8.replace(/</g, "<").replace(/>/g, ">");
+          var input9Value = valuesArray[i].input9.replace(/</g, "<").replace(/>/g, ">");
+          var input10Value = valuesArray[i].input10;
+          var jklContentText = '<u>' + input1Value + ': ' + input2Value + '</b></u>' + input3Value + ' + ';
+          jklContentText += '<a href="javascript:void(0)" onclick="toggleJKLDetails(event, ' + i + ')">[' + (i + 1) + ']</a>';
+          jklContentText += '<div id="jklDetails_' + i + '" class="jkl-details">' + input1Value + ":" + '<br>'+ input4Value + input5Value + input6Value + input11Value + input12Value + input13Value + input7Value + '<a href="' + input8Value + '">' + input8Value + '</a>' + input9Value + '</div>';
+          var jklContent = document.createElement("div");
+          jklContent.innerHTML = jklContentText;
+          jklContainer.appendChild(jklContent);
+        }
+        showAllJKLButton.textContent = "Hide All JKL"; // Update button text
+        showAllJKLButton.classList.add("active"); // Add "active" class
+      } else {
+        // Clear JKL content if it's not empty
+        jklContainer.innerHTML = '';
+        showAllJKLButton.textContent = "Show All JKL"; // Update button text
+        showAllJKLButton.classList.remove("active"); // Remove "active" class
+      }
+    }
+    // Toggle the visibility of JKL details
+    function toggleJKLDetails(index) {
+      var detailsDiv = document.getElementById('jklDetails_' + index);
+      if (detailsDiv.style.display === 'none') {
+        detailsDiv.style.display = 'block';
+      } else {
+        detailsDiv.style.display = 'none';
+      }
+    }
+    // Toggle the visibility of LMN content
+    function toggleLMN() {
+      var lmnContent = document.getElementById("lmnContent");
+      var showLMNButton = document.getElementById("showLMNButton");
+      lmnContentVisible = !lmnContentVisible;
+      if (lmnContentVisible) {
+        var input1Value = document.getElementById("input1").value;
+        var input2Value = document.getElementById("input2").value.replace(/</g, "<").replace(/>/g, ">");
+        var input3Value = document.getElementById("input3").value.replace(/</g, "<").replace(/>/g, ">");
+        var input4Value = document.getElementById("input4").value.replace(/</g, "<").replace(/>/g, ">");
+        var input5Value = document.getElementById("input5").value.replace(/</g, "<").replace(/>/g, ">");
+        var input6Value = document.getElementById("input6").value.replace(/</g, "<").replace(/>/g, ">");
+        var input11Value = document.getElementById("input11").value.replace(/</g, "<").replace(/>/g, ">");
+        var input12Value = document.getElementById("input12").value.replace(/</g, "<").replace(/>/g, ">");
+        var input13Value = document.getElementById("input13").value.replace(/</g, "<").replace(/>/g, ">");
+        var input7Value = document.getElementById("input7").value.replace(/</g, "<").replace(/>/g, ">");
+        var input8Value = document.getElementById("input8").value.replace(/</g, "<").replace(/>/g, ">");
+        var input9Value = document.getElementById("input9").value.replace(/</g, "<").replace(/>/g, ">");
+        var input10Value = document.getElementById("input10").value;
+        var lmnContentText = '<u>' + input1Value + ': ' + input2Value + '</b></u>' + input3Value + ' + ';
+        lmnContentText += '<a href="javascript:void(0)" onclick="toggleDetails()">[Details]</a>';
+        document.getElementById("lmnOutput").innerHTML = lmnContentText;
+        lmnContent.style.display = "block";
+        showLMNButton.textContent = "Hide LMN";
+        showLMNButton.classList.add("active"); // Add "active" class
+      } else {
+        lmnContent.style.display = "none";
+        showLMNButton.textContent = "Show LMN";
+        hideDetails();
+        showLMNButton.classList.remove("active"); // Remove "active" class
+        hideDetails(); // Also call hideDetails when hiding LMN
+      }
+    }
+    // Toggle the visibility of LMN details
+    function toggleDetails() {
+      var lmnDetails = document.getElementById("lmnDetails");
+      lmnDetailsVisible = !lmnDetailsVisible;
+      if (lmnDetailsVisible) {
+        var input1Value = document.getElementById("input1").value;
+        var input2Value = document.getElementById("input2").value.replace(/</g, "<").replace(/>/g, ">");
+        var input3Value = document.getElementById("input3").value.replace(/</g, "<").replace(/>/g, ">");
+        var input4Value = document.getElementById("input4").value.replace(/</g, "<").replace(/>/g, ">");
+        var input5Value = document.getElementById("input5").value.replace(/</g, "<").replace(/>/g, ">");
+        var input6Value = document.getElementById("input6").value.replace(/</g, "<").replace(/>/g, ">");
+        var input11Value = document.getElementById("input11").value.replace(/</g, "<").replace(/>/g, ">");
+        var input12Value = document.getElementById("input12").value.replace(/</g, "<").replace(/>/g, ">");
+        var input13Value = document.getElementById("input13").value.replace(/</g, "<").replace(/>/g, ">");
+        var input7Value = document.getElementById("input7").value.replace(/</g, "<").replace(/>/g, ">");
+        var input8Value = document.getElementById("input8").value.replace(/</g, "<").replace(/>/g, ">");
+        var input9Value = document.getElementById("input9").value.replace(/</g, "<").replace(/>/g, ">");
+        var input10Value = document.getElementById("input10").value;
+        var detailsContent = '<div class="details-content">' + input1Value + ':' + '<br>' + input4Value + input5Value + input6Value + input11Value + input12Value + input13Value+ input7Value + '<a href="' + input8Value + '">' + input8Value + '</a>' + input9Value + '</div>';
+        lmnDetails.innerHTML = detailsContent;
+        lmnDetails.style.display = "block";
+      } else {
+        lmnDetails.style.display = "none";
+      }
+    }
+    // Hide the details
+    function hideDetails() {
+      var lmnDetails = document.getElementById("lmnDetails");
+      lmnDetails.style.display = "none";
+      lmnDetailsVisible = false;
+    }
+    // Function to format the date as "dd Month Name, yyyy-hrhr:minmin"into input field 9
+    function formatDate(date) {
+      const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+      const day = date.getDate();
+      const monthName = months[date.getMonth()];
+      const year = date.getFullYear();
+      const hours = date.getHours().toString().padStart(2, '0'); // Add leading zero if necessary
+      const minutes = date.getMinutes().toString().padStart(2, '0'); // Add leading zero if necessary
+      return `, Accessed on:${day} ${monthName}, ${year}-${hours}:${minutes}`;
+    }
+    // Function to handle the Ctrl + D + T key combination
+    function handleCtrlDT(event) {
+      if (event.ctrlKey && event.key === "d") {
+        // Prevent the default behavior of the key combination
+        event.preventDefault();
+        // Generate the current date and time in the desired format
+        const currentDate = new Date();
+        const formattedDate = formatDate(currentDate);
+        // Insert the formatted date into input 9
+        document.getElementById("input9").value = formattedDate;
+      }
+    }
+    // Add an event listener to the document for keydown events
+    document.addEventListener("keydown", handleCtrlDT);
+    // Toggle the visibility of ABC content
+    var mainTextVisible = false; // Declare the variable
+    function toggleABC() {
+      var output = document.getElementById("output");
+      var showButton = document.getElementById("showButton");
+      mainTextVisible = !mainTextVisible;
+      if (mainTextVisible) {
+        var input1Value = document.getElementById("input1").value.replace(/</g, "<").replace(/>/g, ">");
+        var input2Value = document.getElementById("input2").value.replace(/</g, "<").replace(/>/g, ">");
+        var input3Value = document.getElementById("input3").value.replace(/</g, "<").replace(/>/g, ">");
+        var input4Value = document.getElementById("input4").value.replace(/</g, "<").replace(/>/g, ">");
+        var input5Value = document.getElementById("input5").value.replace(/</g, "<").replace(/>/g, ">");
+        var input6Value = document.getElementById("input6").value.replace(/</g, "<").replace(/>/g, ">");
+        var input11Value = document.getElementById("input11").value.replace(/</g, "<").replace(/>/g, ">");
+        var input12Value = document.getElementById("input12").value.replace(/</g, "<").replace(/>/g, ">");
+        var input13Value = document.getElementById("input13").value.replace(/</g, "<").replace(/>/g, ">");
+        var input7Value = document.getElementById("input7").value.replace(/</g, "<").replace(/>/g, ">");
+        var input8Value = document.getElementById("input8").value.replace(/</g, "<").replace(/>/g, ">");
+        var input9Value = document.getElementById("input9").value.replace(/</g, "<").replace(/>/g, ">");
+        var input10Value = document.getElementById("input10").value;
+        output.textContent = '{input1: "' + input1Value + '", input2: "' + input2Value + '", input3: "' + input3Value + '", input4: "' + input4Value + '", input5: "' + input5Value + '", input6: "' + input6Value + '", input11: "' + input11Value + '", input12: "' + input12Value + '", input13: "' + input13Value + '", input7: "' + input7Value + '", input8: "' + input8Value + '", input9: "' + input9Value + '", input10: "' + input10Value + '"}' + ",";
+        showButton.innerHTML = "Hide ABC";
+        showButton.classList.add("active"); // Add "active" class
+        output.style.display = "block";
+        showButton.textContent = "Hide ABC";
+      } else {
+        output.style.display = "none";
+        showButton.textContent = "Show ABC";
+        showButton.innerHTML = "Show ABC";
+        showButton.classList.remove("active"); // Remove "active" class}
+      }
+    }
+    //Using enter key etc. to enter #x003C;br> etc. in input field
+    function addLineBreak(event) {
+      if (event.key === "Enter" && event.ctrlKey) {
+        event.preventDefault();
+        var input = event.target;
+        var cursorPosition = input.selectionStart;
+        var currentValue = input.value;
+        var newValue =
+          currentValue.substring(0, cursorPosition) +
+          "<br>" +
+          currentValue.substring(cursorPosition);
+        input.value = newValue;
+        input.setSelectionRange(cursorPosition + 4, cursorPosition + 4);
+      }
+      if (event.key === "b" && event.ctrlKey) {
+        event.preventDefault();
+        var input = event.target;
+        var cursorPosition = input.selectionStart;
+        var currentValue = input.value;
+        var newValue =
+          currentValue.substring(0, cursorPosition) +
+          "<b>" +
+          "</b>" +
+          currentValue.substring(cursorPosition);
+        input.value = newValue;
+        input.setSelectionRange(cursorPosition + 3, cursorPosition + 3);
+      }
+      if (event.key === "u" && event.ctrlKey) {
+        event.preventDefault();
+        var input = event.target;
+        var cursorPosition = input.selectionStart;
+        var currentValue = input.value;
+        var newValue =
+          currentValue.substring(0, cursorPosition) +
+          "<u>" +
+          "</u>" +
+          currentValue.substring(cursorPosition);
+        input.value = newValue;
+        input.setSelectionRange(cursorPosition + 3, cursorPosition + 3);
+      }
+
+    }
+    var inputFields = document.querySelectorAll("input, textarea");
+    inputFields.forEach(function (input) {
+      input.addEventListener("keydown", addLineBreak);
+    });
+  </script>
+  <!-- this script is for saving and loading the page from the very position -->
+  <script>
+    function savePageState() {
+      // Check if local storage is available
+      if (typeof Storage !== "undefined") {
+        // Create an object to store the page state
+        var pageState = {
+          inputValues: {},
+          mainTextVisible: mainTextVisible,
+          lmnContentVisible: lmnContentVisible,
+          lmnDetailsVisible: lmnDetailsVisible,
+          outputContent: document.getElementById("output").textContent,
+          showAllJKLButtonActive: showAllJKLButton.classList.contains("active"),
+          jklContainerContent: jklContainer.innerHTML,
+          showLMNButtonActive: showLMNButton.classList.contains("active"),
+          lmnOutputContent: document.getElementById("lmnOutput").innerHTML,
+          lmnDetailsContent: document.getElementById("lmnDetails").innerHTML,
+        };
+        // Store the input field values
+        var inputFields = document.querySelectorAll("input, textarea");
+        inputFields.forEach(function (input) {
+          pageState.inputValues[input.id] = input.value;
+        });
+        // Convert the object to JSON and store it in local storage
+        localStorage.setItem("pageState", JSON.stringify(pageState));
+        alert("Page state saved successfully!");
+      } else {
+        alert(
+          "Local storage is not available. Your browser may be in private mode or have local storage disabled. " +
+          "This feature requires local storage to work properly."
+        );
+      }
+    }
+    function loadPageState() {
+      // Check if local storage is available
+      if (typeof Storage !== "undefined") {
+        // Retrieve the saved page state from local storage
+        var savedState = localStorage.getItem("pageState");
+        if (savedState) {
+          // Parse the JSON and restore the state
+          var pageState = JSON.parse(savedState);
+          // Restore input field values
+          for (var inputId in pageState.inputValues) {
+            var inputValue = pageState.inputValues[inputId];
+            document.getElementById(inputId).value = inputValue;
+          }
+          // Restore visibility states
+          mainTextVisible = pageState.mainTextVisible;
+          lmnContentVisible = pageState.lmnContentVisible;
+          lmnDetailsVisible = pageState.lmnDetailsVisible;
+          // Toggle visibility based on restored states
+          if (mainTextVisible) {
+            toggleABC();
+          }
+          if (lmnContentVisible) {
+            toggleLMN();
+          }
+          if (lmnDetailsVisible) {
+            toggleDetails();
+          }
+          // Restore output content and button states
+          document.getElementById("output").textContent = pageState.outputContent;
+          if (pageState.showAllJKLButtonActive) {
+            toggleAllJKL();
+          }
+          jklContainer.innerHTML = pageState.jklContainerContent;
+          if (pageState.showLMNButtonActive) {
+            toggleLMN();
+          }
+          document.getElementById("lmnOutput").innerHTML = pageState.lmnOutputContent;
+          document.getElementById("lmnDetails").innerHTML = pageState.lmnDetailsContent;
+          alert("Page state loaded successfully!");
+        } else {
+          alert("No saved state found.");
+        }
+      } else {
+        alert(
+          "Local storage is not available. Your browser may be in private mode or have local storage disabled. " +
+          "This feature requires local storage to work properly."
+        );
+      }
+    }
+  </script>
+  <!-- script for preventing scroll to top on click of hyperlink -->
+  <script>
+    function toggleJKLDetails(event, index) {
+      event.preventDefault(); // Prevent the default anchor behavior
+      var detailsDiv = document.getElementById('jklDetails_' + index);
+      // Toggle the display of the clicked detail
+      if (detailsDiv.style.display === 'block') {
+        detailsDiv.style.display = 'none'; // Close the clicked detail
+      } else {
+        // Close all open details, (एउटा लिङ्क खोल्दा अर्को लिङ्कको content बन्द नगर्ने भए यो ३ लाइन हटाइदिनुहोस्)
+        var allDetails = document.querySelectorAll('.jkl-details');
+        allDetails.forEach(function (detail) {
+          detail.style.display = 'none';
+        });
+        // Open the clicked detail
+        detailsDiv.style.display = 'block';
+      }
+    }
+  </script>
+ 
+  
+   <a id="BOTTOM"></a>
+  <footer>
+    <div id="abbr">
+      <p>
+        <br>cb1=constitutional bench (संवैधानिक इजलास)
+        <br>coni0=certiorari order not issued 
+        <br>coi1=certiorari order issued 
+        <br>db1=double bench (संयुक्त इजलास)
+        <br>efb5=extended full bench of five judges 
+        <br>fb1=full bench(पूर्ण इजलास)
+        <br>ioi1=interim order issued (अन्तरिम आदेश जारी)
+        <br>ioni0=interim order not issued (अन्तरिम आदेश जारी नहुने)
+        <br>jrl1=judicial review of legislature
+        <br>moni0=mandatory order not issued
+        <br>moi1=mandatory order issued (उत्प्रेषण)
+        <br>pg1=preference given (अग्राधिकार)
+        <br>sb1=single bench (एकल इजलास)
+        <br>sc1=supreme court(सर्वोच्च अदालत)
+        <br>sco0=show caused ordered not issued  (कारण देखाउन आदेश जारी नहुने)
+        <br>sco1=show cause order issued (कारण देखाउ आदेश जारी)
+        <br>wi1=writ issued (रिट जारी)
+        <br>wip1=writ issued partially (रिट जारी आंशिक)
+        <br>wq1=writ quashed (रिट खारेज)
+        <br>kp1=koshi province
+        <br>pa1=province assembly
+        <br>cm1=constitutional morality
+        <br>voc1=vote of confidence
+        <br>ipk1=ishwor prasad khatiwoda
+        <br>cm2=chief minister
+        <br>pc1=parliamentary culture
+    </p>
+    </div>
+    <p id="developedby"><u><b>Developed By:</b></u><br>Shiva Prasad Acharya (M.Sc.; LL.M)<br>
+      Shiva.Acharya@supremecourt.gov.np <br>परमा एकादशी, २०८०
+    </p>
+  </footer>
+</body>
+</html>
